@@ -18,7 +18,7 @@ $router->get('/', function () use ($router) {
 // Gets the gas-prices from the API
 $router->get('/gas-prices', function () {
     $client = new \GuzzleHttp\Client();
-    $request = $client->get('https://api.datos.gob.mx/v1/precio.gasolina.publico');
+    $request = $client->get('https://api.datos.gob.mx/v1/precio.gasolina.publico?pageSize=10018');
     $response = json_decode($request->getBody(), true);
     return $response;
 });
