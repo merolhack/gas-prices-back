@@ -36,7 +36,7 @@ $router->get('/states', function () {
 // Gets the municipalities from the database
 $router->get('/municipalities/{stateId}', function ($stateId = 01) {
     $results = DB::table('zip-codes')
-        ->select('c_estado AS state_id', 'c_mnpio AS id', 'd_mnpio AS name')
+        ->select('c_mnpio AS id', 'd_mnpio AS name')
         ->where('c_estado', $stateId)
         ->groupBy('zip-codes.d_mnpio')
         ->get();

@@ -44,3 +44,41 @@ Es necesario modificar los datos de conexión con la base de datos en el archivo
 En ese mismo archivo se debe deshabilitar el modo estricto de MySQL:
 
 * DB_STRICT_MODE=false
+
+## Base de datos
+
+Esquema de la base de datos:
+
+```sql
+CREATE TABLE `zip-codes` (
+  `d_codigo` varchar(5) NOT NULL,
+  `d_asenta` varchar(100) NOT NULL,
+  `d_tipo_asenta` varchar(30) NOT NULL,
+  `d_mnpio` varchar(100) NOT NULL,
+  `d_estado` varchar(100) NOT NULL,
+  `d_ciudad` varchar(100) NOT NULL,
+  `d_cp` varchar(5) NOT NULL,
+  `c_estado` varchar(100) NOT NULL,
+  `c_oficina` varchar(100) NOT NULL,
+  `c_cp` varchar(100) NOT NULL,
+  `c_tipo_asenta` varchar(100) NOT NULL,
+  `c_mnpio` varchar(100) NOT NULL,
+  `id_asenta_cpcons` varchar(100) NOT NULL,
+  `d_zona` varchar(100) NOT NULL,
+  `c_cve_ciudad` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for table `zip-codes`
+--
+ALTER TABLE `zip-codes`
+  ADD KEY `c_estado` (`c_estado`),
+  ADD KEY `c_mnpio` (`c_mnpio`);
+COMMIT;
+````
+
+## Referencias
+
+* [Deploying a PHP and MySQL Web App with Heroku](https://scotch.io/@phalconVee/deploying-a-php-and-mysql-web-app-with-heroku)
+* [Getting Started with Laravel on Heroku](https://devcenter.heroku.com/articles/getting-started-with-laravel)
+* [Configuration and Config Vars](https://devcenter.heroku.com/articles/config-vars)
