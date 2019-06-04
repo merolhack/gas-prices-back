@@ -20,7 +20,6 @@ $router->get('/gas-prices', function () {
     $client = new \GuzzleHttp\Client();
     $request = $client->get('https://api.datos.gob.mx/v1/precio.gasolina.publico');
     $response = json_decode($request->getBody(), true);
-    dd($response->results);
     return $response;
 });
 
@@ -36,7 +35,7 @@ $router->get('/states', function () {
 // Gets the municipalities from the database
 $router->get('/municipalities/{stateId}', function ($stateId = 01) {
     $results = DB::table('zip-codes')
-        ->select('c_mnpio AS id', 'd_mnpio AS name')
+        ->select('c_mnpio AS id', 'd_mnpio AS name', 'd_codigo AS zip')
         ->where('c_estado', $stateId)
         ->groupBy('zip-codes.d_mnpio')
         ->get();

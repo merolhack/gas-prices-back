@@ -82,3 +82,4 @@ COMMIT;
 * [Deploying a PHP and MySQL Web App with Heroku](https://scotch.io/@phalconVee/deploying-a-php-and-mysql-web-app-with-heroku)
 * [Getting Started with Laravel on Heroku](https://devcenter.heroku.com/articles/getting-started-with-laravel)
 * [Configuration and Config Vars](https://devcenter.heroku.com/articles/config-vars)
+* [Steps to enable CORS on a Lumen API Backend](https://www.codementor.io/chiemelachinedum/steps-to-enable-cors-on-a-lumen-api-backend-e5a0s1ecx)
