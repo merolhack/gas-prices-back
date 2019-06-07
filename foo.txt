@@ -1,0 +1,18 @@
+Access Credentials
+
+DB Name:       heroku_908264cdde1ad1d
+Username:	b298150b511ed5
+Password:	23fc64e2
+Host:       us-cdbr-iron-east-02.cleardb.net
+Port:       3306
+
+mysql://b298150b511ed5:23fc64e2@us-cdbr-iron-east-02.cleardb.net/heroku_908264cdde1ad1d?reconnect=true
+
+mysql -u b298150b511ed5 -p -h us-cdbr-iron-east-02.cleardb.net heroku_908264cdde1ad1d < 
+
+heroku config:set DB_HOST=us-cdbr-iron-east-02.cleardb.net
+heroku config:set DB_PORT=3306
+heroku config:set DB_DATABASE=heroku_908264cdde1ad1d
+heroku config:set DB_USERNAME=b298150b511ed5
+heroku config:set DB_PASSWORD=23fc64e2
+heroku config:set DB_STRICT_MODE=false
